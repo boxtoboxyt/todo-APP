@@ -1,3 +1,5 @@
+import { PlusIcon } from '@heroicons/react/24/solid'
+
 const CustomForm = () => {
     
     const handleFormSubmit =(e) => {
@@ -9,8 +11,27 @@ const CustomForm = () => {
     className="todo" 
     onSubmit={handleFormSubmit}>
     <div className="wrapper">
-        <h1>test</h1>
+        <input 
+        type="text"
+        id="task"
+        className="input"
+        onInput={(e) => setTask(e.target.value)}
+        required
+        autoFocus
+        maxLength={60}
+        placeholder="Entrer Tâches"
+        />
+        <label htmlFor="task"
+        className="label"
+        >Entrer Tâches</label>
     </div>
+    <button 
+    className="btn"
+    aria-label="Ajout Tâches"
+    type="submit"
+    >
+    <PlusIcon />
+    </button>
     </form>
   )
 }

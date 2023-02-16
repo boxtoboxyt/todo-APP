@@ -5,9 +5,11 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header>Ma liste</header>
-     <CustomForm />   
+    <div className="container">
+      <header>
+        <h1>Ma Liste</h1>
+      </header>
+        <CustomForm />   
     </div>
   )
 }
